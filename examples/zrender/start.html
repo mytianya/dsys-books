@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zrender start</title>
+    <script src="js/zrender.min.js"></script>
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #main {
+        height: 80px;
+        width: 800px;
+        position: relative;
+        background-color: gray;
+    }
+</style>
+
+<body>
+    <div id="main"></div>
+</body>
+<script type="text/javascript">
+    var zr = zrender.init(document.getElementById('main'));
+    var circle = new zrender.Circle({
+        shape: {
+            cx: 40,
+            cy: 40,
+            r: 40
+        },
+        style: {
+            text: '输入Epoint',
+            textFill: 'white', //文字颜色
+            fontSize: 15, //文字大小
+            textPosition: 'inside',
+        }
+    });
+    zr.add(circle);
+    var line = new zrender.Line({
+        shape: {
+            x1: 80,
+            y1: 40,
+            x2: 160,
+            y2: 40
+        },
+        style: {
+            text: '输入',
+            textFill: 'red', //文字颜色
+            fontSize: 15, //文字大小
+            textPosition: 'top',
+            lineCap: 'round'
+        }
+    })
+    zr.add(line)
+    var rect = new zrender.Rect({
+        shape: {
+            x: 160,
+            y: 10,
+            height: 60,
+            width: 100
+        },
+        style: {
+            text: '电报处理器',
+            textFill: 'red', //文字颜色
+            fontSize: 15, //文字大小
+            textPosition: 'inside',
+            lineCap: 'round'
+        }
+    })
+    zr.add(rect)
+    var line = new zrender.Line({
+        shape: {
+            x1: 260,
+            y1: 40,
+            x2: 340,
+            y2: 40
+        },
+        style: {
+            text: '输出',
+            textFill: 'red', //文字颜色
+            fontSize: 15, //文字大小
+            textPosition: 'top',
+            lineCap: 'round'
+        }
+    })
+    zr.add(line)
+</script>
+
+
+</html>
