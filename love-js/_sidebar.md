@@ -6,7 +6,5 @@
     - [基本引用类型](love-js/chp5.md)
     - [集合引用类型](love-js/chp6.md)
     - [迭代器与生成器](love-js/chp7.md)
-    - [对象、类与面向对象编程](love-js/chp7.md)
-- [爱上Python](love-python/README.md)
-
-    - [基础语法](love-python/basic.md)
+    - [对象、类与面向对象编程](love-js/chp8.md)
+    - [函数](love-js/chp10.md)
